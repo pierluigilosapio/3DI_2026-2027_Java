@@ -18,10 +18,10 @@ public class RicercaSequenzialeVettoreNonOrdinato {
 		out.print("\nInserire dimensione del vettore: ");
 		int n=in.nextInt();
 		
-		// Dichiarazione/allocazione dell'array
+		// Dichiara/alloca il vettore
 		int[] vet = new int[n];
 		
-		//Caricamento del vettore
+		// Carica il vettore
 		for(int i=0;i<vet.length;i++) {
 			out.printf("[%d]: ",i);
 			vet[i] = in.nextInt();
@@ -29,17 +29,17 @@ public class RicercaSequenzialeVettoreNonOrdinato {
 		
 		out.println("-----------------------------");
 		
-		//Visualizzazione del vettore
+		// Visualizza il vettore
 		out.println("\nVETTORE");
 		for(int i=0;i<vet.length;i++) {
 			out.printf("\n[%d]: %d",i,vet[i]);
 		}
 		
-		
+		// ricerca di un valore in un vettore non ordinato
 		out.print("\n\nInserire valore da ricercare: ");
 		int num=in.nextInt();
-				
-		// ricerca di un valore in un vettore non ordinato
+		
+		// imposta un posizione non valida		
 		int pos=-1;
 		for(int i=0;i<vet.length;i++) {
 			if(vet[i]==num) {
