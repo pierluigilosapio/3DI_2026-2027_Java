@@ -3,6 +3,10 @@ package array;
 import java.io.PrintStream;
 import java.util.Scanner;
 
+/**
+ * Algoritmo di ordinamento Selection Sort (o per minimi successivi).
+ * Ordinamento crescente e decrescente.
+ */
 public class SelectionSort {
 
 	public static void main(String[] args) {
@@ -23,45 +27,22 @@ public class SelectionSort {
 			vet[i] = in.nextInt();
 		}
 		
-		
-		// calcolo minimo
-		int posMin=0;
-		for(int j=0+1;j<vet.length;j++) {
-			if(vet[j]<vet[posMin]) posMin=j;
-		}
-		out.println("posMin: "+posMin);
-		
-		// scambia l'elemento 0 con l'elemento di posizione posMin
-		int tmp=vet[0];
-		vet[0]=vet[posMin];
-		vet[posMin]=tmp;
-		
 		//Visualizzazione del vettore
 		for(int k=0;k<vet.length;k++) out.printf("[%d]",vet[k]);
 		
-		// passo 2
-		// calcolo minimo
-		posMin=1;
-		for(int j=posMin+1;j<vet.length;j++) {
-			if(vet[j]<vet[posMin]) posMin=j;
-		}
-		out.println("\nposMin: "+posMin);
 		
-		// scambia l'elemento 1 con l'elemento di posizione posMin
-		tmp=vet[1];
-		vet[1]=vet[posMin];
-		vet[posMin]=tmp;
+		out.println("\n\n------- ORDINAMENTO CRESCENTE --------");
+		int posMin; 
+		int tmp;
 		
-		//Visualizzazione del vettore
-		for(int k=0;k<vet.length;k++) out.printf("[%d]",vet[k]);
-		
+		// cicla
 		for(int i=0;i<vet.length-1;i++) {
 			// calcolo minimo
 			posMin=i;
 			for(int j=posMin+1;j<vet.length;j++) {
 				if(vet[j]<vet[posMin]) posMin=j;
 			}
-			out.println("\nposMin: "+posMin);
+			out.println("posMin: "+posMin);
 			
 			// scambia l'elemento di posizione i con l'elemento di posizione posMin
 			tmp=vet[i];
@@ -70,37 +51,48 @@ public class SelectionSort {
 			
 			//Visualizzazione del vettore
 			for(int k=0;k<vet.length;k++) out.printf("[%d]",vet[k]);
+			out.println("\n");
 		}
 		
+		out.print("VETTORE ORDINATO IN MODO CRESCENTE: ");
+		for(int k=0;k<vet.length;k++) out.printf("[%d]",vet[k]);
 		
-		out.println("\n------- ORDINATO IN MODO DECRESCENTE --------");
+		out.println("\n\n------- ORDINAMENTO DECRESCENTE --------");
 		
+		// indica la posizione dell'elemento maggiore 
+		// tra quelli confrontati.
 		int posMax;
+		
+		// ogni volta che cicla, posiziona l'elemento maggiore
+		// in posizione i.
 		for(int i=0;i<vet.length-1;i++) {
-			// calcolo massimo
+			
+			// imposta la posizione predefinita del massimo 
 			posMax=i;
+			
+			// calcola la posizione del massimo
+			// scartando gli elementi già posizionati
+			// correttamente.
 			for(int j=posMax+1;j<vet.length;j++) {
 				if(vet[j]>vet[posMax]) posMax=j;
 			}
-			out.println("\nposMax: "+posMax);
+			out.println("posMax: "+posMax);
 			
 			// scambia l'elemento di posizione i con l'elemento di posizione posMax
 			tmp=vet[i];
 			vet[i]=vet[posMax];
 			vet[posMax]=tmp;
 			
-			//Visualizzazione del vettore
+			// visualizza del vettore
 			for(int k=0;k<vet.length;k++) out.printf("[%d]",vet[k]);
+			out.println("\n");
 		}
 		
+		out.print("VETTORE ORDINATO IN MODO DECRESCENTE: ");
+		for(int k=0;k<vet.length;k++) out.printf("[%d]",vet[k]);
 		
-		out.println("\n-----------------------------");
-		
-		
-		
-		
-		
-		
+		in.close();
+		out.println("\nProgramma terminato.");
 		
 	}
 
