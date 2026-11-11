@@ -5,7 +5,11 @@ import java.util.Scanner;
 
 /**
  * Ricerca sequenziale (o lineare) su un vettore non ordinato.
- *
+ * Come funziona:
+ * 1. Si confronta l'elemento cercato (chiave) con il primo elemento del vettore.
+ * 2. Se sono uguali, la ricerca termina con successo restituendo la posizione (indice).
+ * 3. altrimenti, si passa all'elemento successivo e si ripete il procedimento.
+ * 4. Se si raggiunge la fine del vettore senza trovare l'elemento, l'algoritmo segnala che il valore non è presente.
  */
 public class RicercaSequenzialeVettoreNonOrdinato {
 
@@ -35,7 +39,7 @@ public class RicercaSequenzialeVettoreNonOrdinato {
 			out.printf("\n[%d]: %d",i,vet[i]);
 		}
 		
-		// ricerca di un valore in un vettore non ordinato
+		// chiede in input il valore da ricercare (chiave)
 		out.print("\n\nInserire valore da ricercare: ");
 		int num=in.nextInt();
 		
@@ -43,10 +47,13 @@ public class RicercaSequenzialeVettoreNonOrdinato {
 		int pos=-1;
 		for(int i=0;i<vet.length;i++) {
 			if(vet[i]==num) {
-				pos=i;
-				break;
+				pos=i; // memorizza l'indice dove è stato trovata la chiave
+				break; // esce dal ciclo perchè è inutile continuare la ricerca
 			}
 		}
+
+		// se la posizione pos è maggiore o uguale di zero allora la chiave è stata trovata
+		// altrimenti se la posizione è rimasta -1 significa che non è stata trovata.
 		if(pos>=0) out.printf("\nValore %d trovato in posizione %d",num,pos);
 		else out.printf("\nValore %d non trovato.",num);
 		
