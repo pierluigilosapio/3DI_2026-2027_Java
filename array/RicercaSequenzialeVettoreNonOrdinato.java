@@ -47,7 +47,7 @@ public class RicercaSequenzialeVettoreNonOrdinato {
 				break;
 			}
 		}
-		if(pos>0) out.printf("\nValore %d trovato in posizione %d",num,pos);
+		if(pos>=0) out.printf("\nValore %d trovato in posizione %d",num,pos);
 		else out.printf("\nValore %d non trovato.",num);
 		
 		//Chiusura del flusso di input
