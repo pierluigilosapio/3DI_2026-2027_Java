@@ -37,8 +37,12 @@ public class SelectionSort {
 		
 		// cicla
 		for(int i=0;i<vet.length-1;i++) {
-			// calcolo minimo
+			// imposta la posizione predefinita del minimo
 			posMin=i;
+
+			// calcola la posizione del minimo
+			// scartando gli elementi già posizionati
+			// correttamente.
 			for(int j=posMin+1;j<vet.length;j++) {
 				if(vet[j]<vet[posMin]) posMin=j;
 			}
@@ -71,7 +75,7 @@ public class SelectionSort {
 			posMax=i;
 			
 			// calcola la posizione del massimo
-			// scartando gli elementi gi� posizionati
+			// scartando gli elementi già posizionati
 			// correttamente.
 			for(int j=posMax+1;j<vet.length;j++) {
 				if(vet[j]>vet[posMax]) posMax=j;
