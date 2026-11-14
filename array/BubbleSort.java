@@ -3,6 +3,9 @@ package array;
 import java.io.PrintStream;
 import java.util.Scanner;
 
+/**
+ * Algoritmo di ordinamento crescente BubbleSort
+ */
 public class BubbleSort {
 
 	public static void main(String[] args) {
@@ -11,22 +14,19 @@ public class BubbleSort {
 		
 		out.println("+++ BUBBLE SORT +++");
 		
-		/*
 		out.print("\nInserire dimensione del vettore: ");
 		int n=in.nextInt();
 		
-		// Dichiarazione/allocazione dell'array
+		// Dichiara/alloca l'array
 		int[] vet = new int[n];
 		
-		//Caricamento del vettore
+		// Carica il vettore
 		for(int i=0;i<vet.length;i++) {
 			out.printf("[%d]: ",i);
 			vet[i] = in.nextInt();
 		}
-		*/
-		int vet[]= {5,3,8,4,6};
 		
-		//Visualizzazione del vettore
+		// Visualizza il vettore
 		for(int k=0;k<vet.length;k++) out.printf("[%d]",vet[k]);
 		out.println();
 		
@@ -34,7 +34,8 @@ public class BubbleSort {
 		// posizionati correttamente.
 		for(int i=0;i<vet.length-1;i++) {
 			// indica se sono stati fatti
-			// degli scambi.
+			// degli scambi. 
+			// La variabile scambi è detta 'sentinella'.
 			boolean scambi=false;
 			
 			// cicla dal primo sino al penultimo
