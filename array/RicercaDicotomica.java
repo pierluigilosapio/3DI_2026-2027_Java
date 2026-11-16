@@ -4,8 +4,8 @@ import java.io.PrintStream;
 
 /**
  * Ricerca dicotomica (o binaria) in un vettore ordinato (in modo crescente).
- * Applica la tecnica "divide-et-impera", cioè divide l'array in due parti
- * e verifica se l'elemento centrale coincide con il valore cercato diversamente
+ * Applica la tecnica "divide-et-impera", cioÃ¨ divide l'array in due parti
+ * e verifica se l'elemento centrale coincide con il valore cercato. Diversamente
  * sposta la ricerca sulla parte sx o parte dx a seconda che il valore da ricercare
  * sia minore o maggiore del valore centrale.
  * 
@@ -36,8 +36,8 @@ public class RicercaDicotomica {
 			} else if(num>vet[centro]) inizio=centro+1;
 			else fine=centro-1;
 		}
-		// se la posizione pos è maggiore o uguale di zero allora la chiave è stata trovata
-		// altrimenti se la posizione è rimasta -1 significa che non è stata trovata.
+		// se la posizione pos Ã¨ maggiore o uguale di zero allora la chiave Ã¨ stata trovata
+		// altrimenti se la posizione Ã¨ rimasta -1 significa che non Ã¨ stata trovata.
 		if(pos>=0) out.printf("\nValore %d trovato in posizione %d",num,pos);
 		else out.printf("\nValore %d non trovato.",num);
 
