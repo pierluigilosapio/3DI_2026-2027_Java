@@ -6,7 +6,7 @@ import java.util.Scanner;
 /**
  * Algoritmo di ordinamento crescente BubbleSort
  */
-public class BubbleSort {
+public class OrdinamentoBubbleSort {
 
 	public static void main(String[] args) {
 		PrintStream out = System.out;
