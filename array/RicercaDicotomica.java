@@ -24,17 +24,20 @@ public class RicercaDicotomica {
 		
 		int num=65; // valore da ricercare (chiave)
 		int pos=-1;
-		int inizio=0;
-		int fine=vet.length-1;
+		int inizio=0; // posizione iniziale
+		int fine=vet.length-1; // posizione finale
 		
 		while(inizio<=fine) {
+			// calcola la posizione centrale
 			int centro=(inizio+fine)/2;
 			out.printf("\ninizio: %d, centro: %d, fine; %d",inizio,centro,fine);
+
+			// verifica se il valore centrale è uguale alla chiave
 			if(vet[centro]==num) {
 				pos=centro;
 				break;
-			} else if(num>vet[centro]) inizio=centro+1;
-			else fine=centro-1;
+			} else if(num>vet[centro]) inizio=centro+1; // se la chiave è maggiore del valore centrale allora la ricerca si sposta sulla parte dx spostando l'inizio subito dopo il centro
+			else fine=centro-1; // se la chiave è minore del valore centrale allora la ricerca si sposta sulla parte sx spostando la fine subito prima del centro
 		}
 		// se la posizione pos è maggiore o uguale di zero allora la chiave è stata trovata
 		// altrimenti se la posizione è rimasta -1 significa che non è stata trovata.
