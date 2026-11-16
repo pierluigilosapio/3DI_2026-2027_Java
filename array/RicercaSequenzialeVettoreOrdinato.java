@@ -8,8 +8,8 @@ import java.util.Scanner;
  * Come funziona:
  * 1. Si confronta l'elemento cercato (chiave) con il primo elemento del vettore.
  * 2. Se sono uguali, la ricerca termina con successo restituendo la posizione (indice).
- * 3. altrimenti se l'elemento cercato è minore dell'elemento del vettore, la ricerca termina con valore non trovato.
- * 4. Se si raggiunge la fine del vettore senza trovare l'elemento, l'algoritmo segnala che il valore non è presente.
+ * 3. altrimenti se l'elemento cercato Ã¨ minore dell'elemento del vettore, la ricerca termina con valore non trovato.
+ * 4. Se si raggiunge la fine del vettore senza trovare l'elemento, l'algoritmo segnala che il valore non Ã¨ presente.
  */
 public class RicercaSequenzialeVettoreOrdinato {
 
@@ -17,7 +17,7 @@ public class RicercaSequenzialeVettoreOrdinato {
 		PrintStream out = System.out;
 		Scanner in = new Scanner(System.in);
 		
-		out.println("+++ RICERCA SEQUENZIALE IN UN VETTORE NON ORDINATO +++");
+		out.println("+++ RICERCA SEQUENZIALE IN UN VETTORE ORDINATO +++");
 		
 		out.print("\nInserire dimensione del vettore: ");
 		int n=in.nextInt();
@@ -47,15 +47,15 @@ public class RicercaSequenzialeVettoreOrdinato {
 		int pos=-1;
 		for(int i=0;i<vet.length;i++) {
 			if(vet[i]==num) {
-				pos=i; // memorizza l'indice dove è stato trovata la chiave
-				break; // esce dal ciclo perchè è inutile continuare la ricerca
+				pos=i; // memorizza l'indice dove Ã¨ stato trovata la chiave
+				break; // esce dal ciclo perchÃ¨ Ã¨ inutile continuare la ricerca
 			} else if(num<vet[i]) 
-				break; 	// esce dal ciclo perchè se num<vet[i], è sicuro che num non è presente perchè
+				break; 	// esce dal ciclo perchÃ¨ se num<vet[i], Ã¨ sicuro che num non Ã¨ presente perchÃ¨
 						// gli elementi successivi saranno maggiori di vet[i] e quindi diversi da num. 
 		}
 
-		// se la posizione pos è maggiore o uguale di zero allora la chiave è stata trovata
-		// altrimenti se la posizione è rimasta -1 significa che non è stata trovata.
+		// se la posizione pos Ã¨ maggiore o uguale di zero allora la chiave Ã¨ stata trovata
+		// altrimenti se la posizione Ã¨ rimasta -1 significa che non Ã¨ stata trovata.
 		if(pos>=0) out.printf("\nValore %d trovato in posizione %d",num,pos);
 		else out.printf("\nValore %d non trovato.",num);
 		
