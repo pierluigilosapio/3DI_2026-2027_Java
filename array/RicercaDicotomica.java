@@ -19,7 +19,7 @@ public class RicercaDicotomica {
 		int vet[]= {10,20,30,40,50,60,70,80};
 
 		
-		//Visualizzazione del vettore
+		// visualizza il vettore
 		for(int k=0;k<vet.length;k++) out.printf("[%d]",vet[k]);
 		
 		int num=65; // valore da ricercare (chiave)
