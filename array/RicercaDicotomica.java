@@ -5,7 +5,7 @@ import java.io.PrintStream;
 /**
  * Ricerca dicotomica (o binaria) in un vettore ordinato (in modo crescente).
  * Applica la tecnica "divide-et-impera", cioè divide l'array in due parti
- * e verifica se l'elemento centrale coincide con il valore cercato. Diversamente
+ * e verifica se l'elemento centrale coincide con il valore cercato, diversamente
  * sposta la ricerca sulla parte sx o parte dx a seconda che il valore da ricercare
  * sia minore o maggiore del valore centrale.
  * 
